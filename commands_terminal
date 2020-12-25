@@ -1,0 +1,32 @@
+yarn add @types/express -D
+yarn add typescript -D
+yarn tsc --init
+yarn ts-node-dev -D
+yarn add ts-node-dev -D
+yarn add express
+yarn add typeorm sqlite3
+yarn typeorm
+yarn typeorm migration:create -n orphanages
+yarn typeorm migration:create -n createOrphanages
+yarn typeorm migration:run
+yarn typeorm migration:revert
+yarn dev
+yarn add multer
+yarn add @types/multer
+
+
+colocar no package.json
+"scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+  }
+
+  alterar no tsconfig.json
+  "target": "es2017",
+  "strict": true,
+  "strictPropertyInitialization": false
+  "esModuleInterop": true,
+  "experimentalDecorators": true, 
+  "emitDecoratorMetadata": true,
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true
